@@ -1,4 +1,4 @@
-package Plantillas.yugioh;
+package Plantillas;
 
 public class CartasDeMagia extends CartasYuGiOh{
     public CartasDeMagia() {
