@@ -1,4 +1,4 @@
-package Plantillas.yugioh;
+package Plantillas;
 
 public class CartasDeMoustruos extends CartasYuGiOh{
     private Integer attack;
