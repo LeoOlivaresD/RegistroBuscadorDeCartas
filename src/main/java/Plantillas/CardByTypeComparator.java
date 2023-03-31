@@ -1,4 +1,4 @@
-package Plantillas.yugioh;
+package Plantillas;
 
 import java.util.Comparator;
 
