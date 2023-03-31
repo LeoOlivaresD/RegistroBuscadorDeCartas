@@ -1,7 +1,7 @@
-package Plantillas.yugioh;
+package Plantillas;
 import java.util.*;
 
-//Usare esta clase para crear todos los metodos de la clase principal
+//Usaré esta clase para crear todos los métodos de la clase principal
 public class CardData extends CartasYuGiOh{
     //Lista de cartas
     List<CartasYuGiOh> listaDeCartas = new ArrayList<>();
@@ -26,7 +26,7 @@ public class CardData extends CartasYuGiOh{
         this.cartas = cartas;
     }
 
-    //OPCION 1 metodo para registrar cartas
+    //OPCION 1 método para registrar cartas
     public void agregarCarta() {
         CartasYuGiOh cartas = new CartasYuGiOh();
         cartas.setIdCard(cartas.getIdCard());
@@ -43,11 +43,11 @@ public class CardData extends CartasYuGiOh{
         System.out.println("Ingrese el nombre de la carta que desea encontrar");
         String cardName = sc.nextLine();
         for (CartasYuGiOh nombreCarta : listaDeCartas) {
-            if (cardName.equalsIgnoreCase(nombreCarta.getName())) {  //de esta forma buscamos omitiendo mayusculas o minusculas
+            if (cardName.equalsIgnoreCase(nombreCarta.getName())) {  //de esta forma buscamos omitiendo mayúsculas o minúsculas
                 System.out.println(nombreCarta.toString());
             }
         }
-        System.out.println("Aprete la tecla \"Enter\" para continuar");
+        System.out.println("Presione la tecla \"Enter\" para continuar");
         sc.nextLine();
     }
 
@@ -60,7 +60,7 @@ public class CardData extends CartasYuGiOh{
                 System.out.println(tipoCarta.toString());
             }
         }
-        System.out.println("Aprete la tecla \"Enter\" para continuar");
+        System.out.println("Presione la tecla \"Enter\" para continuar");
         sc.nextLine();
     }
 
@@ -73,7 +73,7 @@ public class CardData extends CartasYuGiOh{
                 System.out.println(cartaLimitada.toString());
             }
         }
-        System.out.println("Aprete la tecla \"Enter\" para continuar");
+        System.out.println("Presione la tecla \"Enter\" para continuar");
         sc.nextLine();
         sc.nextLine();
 
@@ -97,7 +97,7 @@ public class CardData extends CartasYuGiOh{
             System.out.println(cartas.toString());
             System.out.println("*************************");
         }
-        System.out.println("Introdusca el nombre de la carta que desea eliminar");
+        System.out.println("Introduzca el nombre de la carta que desea eliminar");
         String cardName = sc.nextLine();
         listaDeCartas.removeIf(nombreCarta -> cardName.equalsIgnoreCase(nombreCarta.getName()));
         System.out.println("Eliminando, presione la tecla \"Enter\" para continuar");
@@ -127,7 +127,7 @@ public class CardData extends CartasYuGiOh{
         sc.nextLine();
     }
 
-    //OPCION 9 MOSTRAR LISTA ORDENADA POR ID DE CARTA
+    //OPCION 9 MOSTRAR LISTA ORDENADA POR TIPO DE CARTA
     public void sortByType(){
         System.out.println("Mostrando lista ordenada por tipo");
         Collections.sort(listaDeCartas,new CardByTypeComparator());
